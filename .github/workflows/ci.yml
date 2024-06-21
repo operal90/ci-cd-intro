@@ -6,13 +6,11 @@ on:
     branches:
       - main
     paths:
-      - 'web/**'
+      - main
   push:
     branches:
       - main
-    paths:
-      - 'web/**'
-
+    
 jobs:
 
   # Run unit tests to make sure everything is 👍
@@ -22,7 +20,7 @@ jobs:
       run:
         shell: bash
         # Define the working directory for all run steps in the workflow
-        working-directory: ./web
+        working-directory: main
     # Specify the OS we want the workflow to run on
     runs-on: ubuntu-latest
     # Define the steps for this job
