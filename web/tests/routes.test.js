@@ -2,7 +2,7 @@ const request = require('supertest')
 const app = require('../app')
 
 describe('Default Endpoint', () => {
-  it('should I return status 200', async () => {
+  it('should I HAVE return status 200', async () => {
     const res = await request(app)
       .get('/')
     expect(res.statusCode).toEqual(200)
